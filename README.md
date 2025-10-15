@@ -68,39 +68,7 @@ This project demonstrates:
 | **Testing** | Selenium WebDriver / IDE |
 | **Version Control** | Git & GitHub |
 
----
 
-## 📂 Project Structure
-
-```
-
-e-waste-management/
-│
-├── app/
-│   ├── **init**.py
-│   ├── models.py
-│   ├── routes.py
-│   ├── static/
-│   └── templates/
-│       ├── base.html
-│       ├── home.html
-│       ├── login.html
-│       ├── register.html
-│       ├── dashboard.html
-│       └── admin_dashboard.html
-│
-├── instance/
-│   └── e_waste.db
-│
-├── tests/
-│   └── selenium_tests.py
-│
-├── requirements.txt
-├── .gitignore
-├── run.py
-└── README.md
-
-````
 
 ---
 
