@@ -78,7 +78,7 @@ This project demonstrates:
 ```bash
 git clone https://github.com/<your-username>/e-waste-management.git
 cd e-waste-management
-````
+```
 
 ### Step 2: Create a Virtual Environment
 
