@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>My Pickup Requests</h2>
+<a href="{{ url_for('main.request_pickup') }}" class="btn btn-primary mb-3">New Request</a>
+
+{% if requests %}
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for req in requests %}
+      <tr>
+        <td>{{ req.id }}</td>
+        <td>{{ req.item_type }}</td>
+        <td>{{ req.quantity }}</td>
+        <td>{{ req.location }}</td>
+        <td>
+          <span class="badge 
+            {% if req.status == 'Pending' %} bg-warning
+            {% elif req.status == 'Scheduled' %} bg-info
+            {% elif req.status == 'Completed' %} bg-success
+            {% elif req.status == 'Cancelled' %} bg-danger
+            {% endif %}
+          ">{{ req.status }}</span>
+        </td>
+        <td>{{ req.request_date.strftime("%Y-%m-%d %H:%M") }}</td>
+        <td>
+          {% if req.status in ["Pending", "Scheduled"] %}
+            <form method="post" action="{{ url_for('main.cancel_request', request_id=req.id) }}">
+              <button type="submit" class="btn btn-sm btn-danger">Cancel</button>
+            </form>
+          {% else %}
+            <span class="text-muted">No actions</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>No pickup requests yet.</p>
+{% endif %}
+{% endblock %}

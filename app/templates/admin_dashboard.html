@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>ADMIN DASHBOARD TEST</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Location</th>
+      <th>Status</th>
+      <th>Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for req in requests %}
+    <tr>
+      <td>{{ req.id }}</td>
+      <td>{{ req.user.username }}</td>
+      <td>{{ req.item_type }}</td>
+      <td>{{ req.quantity }}</td>
+      <td>{{ req.location }}</td>
+      <td>
+        <span class="badge bg-info">{{ req.status }}</span>
+      </td>
+      <td>
+        <form method="post" action="{{ url_for('main.update_status', request_id=req.id) }}">
+          <select name="status" class="form-select form-select-sm d-inline w-auto">
+            <option value="Pending" {% if req.status=="Pending" %}selected{% endif %}>Pending</option>
+            <option value="Scheduled" {% if req.status=="Scheduled" %}selected{% endif %}>Scheduled</option>
+            <option value="Completed" {% if req.status=="Completed" %}selected{% endif %}>Completed</option>
+            <option value="Cancelled" {% if req.status=="Cancelled" %}selected{% endif %}>Cancelled</option>
+          </select>
+          <button type="submit" class="btn btn-sm btn-primary">Update</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

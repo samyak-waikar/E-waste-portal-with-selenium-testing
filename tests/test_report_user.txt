@@ -1,0 +1,144 @@
+------------------------------------------------------------
+Test Objective: Open Home Page
+Steps: Navigate to home page
+Expected Result: Home page should open
+Actual Result: Home page opened successfully
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Open Register Page
+Steps: Click Register link
+Expected Result: Register page should open
+Actual Result: Register page opened
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Submit Registration Form (valid)
+Steps: Fill form with valid data and submit
+Expected Result: User should be registered and redirected to login
+Actual Result: Registration successful
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Submit Registration Form (invalid)
+Steps: Submit form with missing/invalid data
+Expected Result: Form should show validation errors
+Actual Result: Form submitted incorrectly
+Status: FAIL
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Login User (correct credentials)
+Steps: Enter valid email and password and submit
+Expected Result: User should be logged in
+Actual Result: Login successful
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Login User (wrong credentials)
+Steps: Enter invalid password
+Expected Result: Login should fail
+Actual Result: Login failed as expected
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Submit E-Waste Request (valid)
+Steps: Fill pickup form with valid data and submit
+Expected Result: Request should appear in dashboard
+Actual Result: Request submitted successfully
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Logout
+Steps: Click logout button
+Expected Result: User should be logged out
+Actual Result: Logout successful
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Cancel Pending Request
+Steps: Click cancel on a pending request
+Expected Result: Request should be cancelled
+Actual Result: Pending request cancelled successfully
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Cancel Completed Request
+Steps: Try to cancel a completed request
+Expected Result: Should not allow cancellation
+Actual Result: No completed request found, cannot cancel
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Access Request Pickup Page
+Steps: Click New Request link from dashboard
+Expected Result: Request Pickup page should open
+Actual Result: Request Pickup page opened
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Check Status Badge Colors
+Steps: Verify badge classes for request statuses
+Expected Result: All requests should have correct colored badges
+Actual Result: 20 status badges found with color classes
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Navigate Back to Dashboard
+Steps: Click My Dashboard link from any page
+Expected Result: Dashboard should open
+Actual Result: Exception: Message: no such element: Unable to locate element: {"method":"link text","selector":"My Dashboard"}
+  (Session info: chrome=141.0.7390.76); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6c4839f25+80677]
+	GetHandleVerifier [0x0x7ff6c4839f80+80768]
+	(No symbol) [0x0x7ff6c45e02bf]
+	(No symbol) [0x0x7ff6c4638b13]
+	(No symbol) [0x0x7ff6c4638ddc]
+	(No symbol) [0x0x7ff6c468cc67]
+	(No symbol) [0x0x7ff6c466154f]
+	(No symbol) [0x0x7ff6c46899c0]
+	(No symbol) [0x0x7ff6c46612e3]
+	(No symbol) [0x0x7ff6c4629770]
+	(No symbol) [0x0x7ff6c462a5a3]
+	GetHandleVerifier [0x0x7ff6c4b1817d+3087741]
+	GetHandleVerifier [0x0x7ff6c4b1223a+3063354]
+	GetHandleVerifier [0x0x7ff6c4b332c5+3198661]
+	GetHandleVerifier [0x0x7ff6c485412e+187694]
+	GetHandleVerifier [0x0x7ff6c485b20f+216591]
+	GetHandleVerifier [0x0x7ff6c4842ee4+117476]
+	GetHandleVerifier [0x0x7ff6c484309f+117919]
+	GetHandleVerifier [0x0x7ff6c48291a8+11688]
+	BaseThreadInitThunk [0x0x7ffbe0f7e8d7+23]
+	RtlUserThreadStart [0x0x7ffbe2948d9c+44]
+
+Status: FAIL
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Submit Multiple Requests
+Steps: Submit two new requests sequentially
+Expected Result: Both requests should appear in dashboard
+Actual Result: Multiple requests submitted successfully
+Status: PASS
+------------------------------------------------------------
+
+------------------------------------------------------------
+Test Objective: Logout
+Steps: Click logout button
+Expected Result: User should be logged out
+Actual Result: Logout successful
+Status: PASS
+------------------------------------------------------------
+

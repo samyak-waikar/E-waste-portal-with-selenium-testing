@@ -1,0 +1,1 @@
+-- Schema file for e-waste portal

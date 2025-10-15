@@ -1,0 +1,32 @@
+
+---
+
+## 🧰 .gitignore
+
+```gitignore
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+
+# SQLite database
+*.db
+instance/
+*.sqlite3
+
+# Flask cache and logs
+*.log
+.flask_session/
+*.pytest_cache/
+
+# IDE specific
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
