@@ -1,3 +1,5 @@
+
+```markdown
 # ♻️ E-Waste Management System
 
 A **Flask-based web application** that streamlines the process of collecting and managing electronic waste.  
@@ -28,31 +30,31 @@ The **E-Waste Management System** provides an online platform for responsible di
 Users can submit pickup requests for e-waste items, and admins can schedule, complete, or cancel requests.
 
 This project demonstrates:
-- Flask backend and routing
-- User authentication using Flask-Login
-- SQLite database integration with SQLAlchemy
-- Selenium automation for testing web workflows
+- Flask backend and routing  
+- User authentication using Flask-Login  
+- SQLite database integration with SQLAlchemy  
+- Selenium automation for testing web workflows  
 
 ---
 
 ## 🚀 Features
 
 ### 👥 User Module
-- Register and Login securely
-- Submit pickup requests (item type, quantity, location)
-- View request history and statuses
-- Cancel pending requests
+- Register and Login securely  
+- Submit pickup requests (item type, quantity, location)  
+- View request history and statuses  
+- Cancel pending requests  
 
 ### 🛠️ Admin Module
-- Admin-only login access
-- View all user pickup requests
-- Accept (Schedule), Complete, or Cancel requests
-- Manage workflow for e-waste collection
+- Admin-only login access  
+- View all user pickup requests  
+- Accept (Schedule), Complete, or Cancel requests  
+- Manage workflow for e-waste collection  
 
 ### 🧪 Testing
-- Automated testing using **Selenium WebDriver**
-- Record and playback tests using **Selenium IDE**
-- Bug detection, regression testing, and reporting
+- Automated testing using **Selenium WebDriver**  
+- Record and playback tests using **Selenium IDE**  
+- Bug detection, regression testing, and reporting  
 
 ---
 
@@ -70,32 +72,35 @@ This project demonstrates:
 
 ## 📂 Project Structure
 
+```
+
 e-waste-management/
 │
 ├── app/
-│ ├── init.py
-│ ├── models.py
-│ ├── routes.py
-│ ├── static/
-│ └── templates/
-│ ├── base.html
-│ ├── home.html
-│ ├── login.html
-│ ├── register.html
-│ ├── dashboard.html
-│ └── admin_dashboard.html
+│   ├── **init**.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── static/
+│   └── templates/
+│       ├── base.html
+│       ├── home.html
+│       ├── login.html
+│       ├── register.html
+│       ├── dashboard.html
+│       └── admin_dashboard.html
 │
 ├── instance/
-│ └── e_waste.db
+│   └── e_waste.db
 │
 ├── tests/
-│ └── selenium_tests.py
+│   └── selenium_tests.py
 │
 ├── requirements.txt
 ├── .gitignore
 ├── run.py
 └── README.md
 
+````
 
 ---
 
@@ -105,24 +110,72 @@ e-waste-management/
 ```bash
 git clone https://github.com/<your-username>/e-waste-management.git
 cd e-waste-management
+````
 
-Step 2: Create a Virtual Environment
+### Step 2: Create a Virtual Environment
+
+```bash
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate   # For Windows
+# OR
+source venv/bin/activate   # For macOS/Linux
+```
 
-Step 3: Install Dependencies
+### Step 3: Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-Step 4: Set Flask App Environment (only first time)
+### Step 4: Set Flask App Environment (only first time)
+
+**Windows:**
+
+```bash
 set FLASK_APP=run.py
 set FLASK_ENV=development
+```
 
-▶️ Running the Application
-Method 1: Using Flask CLI
+**macOS / Linux:**
+
+```bash
+export FLASK_APP=run.py
+export FLASK_ENV=development
+```
+
+---
+
+## ▶️ Running the Application
+
+### Method 1: Using Flask CLI
+
+```bash
 flask run
-Method 2: Using Python
-python run.py
+```
 
-#############
-After running the application open new terminal and run any selenium scripts and check result in report_user or report_admin
-#############
+### Method 2: Using Python
+
+```bash
+python run.py
+```
+
+After running the application, open your browser and visit:
+👉 **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
+
+---
+
+### 💡 Selenium Testing
+
+After the Flask app is running,
+open a **new terminal** and execute any of your Selenium scripts.
+
+You can check the generated test results inside:
+
+* `report_user`
+* `report_admin`
+
+---
+
+```
+
+```
